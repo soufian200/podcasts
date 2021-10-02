@@ -2,9 +2,9 @@ import React from "react"
 import { ImageBackground, StyleSheet, View, Text } from "react-native"
 import colors from "../utils/colors"
 
-export default function Head({ img, title, date, ep }) {
+export default function Head({ img, title, date, ep, small = false }) {
     return <View style={styles.head}>
-        <View style={styles.img}>
+        <View style={[styles.img, { width: small ? 40 : 70, height: small ? 40 : 70 }]}>
             <ImageBackground
                 source={img}
                 style={{ width: "100%", height: "100%" }}
@@ -23,8 +23,8 @@ const styles = StyleSheet.create({
         flexDirection: "row",
     },
     img: {
-        width: 40,
-        height: 40,
+        width: 70,
+        height: 70,
         backgroundColor: colors.softGray,
         borderRadius: 4,
         marginRight: 10,

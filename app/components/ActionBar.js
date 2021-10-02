@@ -5,6 +5,7 @@ import { MaterialIcons } from '@expo/vector-icons';
 import colors from '../utils/colors';
 
 
+
 export default function ActionBar({ ep }) {
     return <View style={{ flexDirection: "row", alignItems: "center" }}>
         <View style={[styles.playBtn, styles.seperateSpace]}>

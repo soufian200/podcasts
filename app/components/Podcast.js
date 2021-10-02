@@ -4,10 +4,10 @@ import colors from '../utils/colors';
 import ActionBar from './ActionBar';
 import Head from './Head';
 
-export default function Podcast({ item }) {
+export default function Podcast({ item, showImg = true, small }) {
     return <View style={styles.container}>
-
-        <Head img={item.img} />
+        {showImg && <Head img={item.img} small={small} />}
+        {showImg || <Text style={styles.date}>2 days age</Text>}
 
         <View style={styles.body}>
             <Text style={styles.title}>Changer de camp (Switching Sides)</Text>
@@ -40,5 +40,8 @@ const styles = StyleSheet.create({
         color: colors.gray,
         fontSize: 13,
     },
-
+    date: {
+        fontSize: 12,
+        color: colors.gray,
+    },
 });

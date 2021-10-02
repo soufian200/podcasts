@@ -9,7 +9,6 @@ export default function Para({ txt }) {
 const styles = StyleSheet.create({
     description: {
         color: "#47494c",
-        fontSize: 14,
-        marginBottom: 20
+        fontSize: 14.5,
     }
 })
